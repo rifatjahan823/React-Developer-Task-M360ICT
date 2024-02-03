@@ -1,0 +1,16 @@
+.pagination{
+    margin-top:3%;
+}
+.pagination a {
+    color: #333333;
+    background-color: white;
+    margin:5px;
+    border: 1px solid  #F1F1F1;
+   padding: 6px 13px;
+   font-weight: 600;
+   border-radius: 8px;
+  }
+.pagination a.active {
+background-color: #2F80ED;
+color: white;
+  }

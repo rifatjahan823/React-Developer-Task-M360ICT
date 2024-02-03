@@ -1,0 +1,33 @@
+.search_bar{
+    width: 400px;
+    margin-left: 110px;
+    background-color: #F0F5FA;
+    border: none;
+    padding: 8px;
+}
+.search_bar:hover, .search_bar:focus{
+    background-color: #F0F5FA;
+    border: none;
+}
+.mobli_menu{
+    display: none;
+}
+/* ***********responsive************ */
+
+@media screen and (max-width: 768px){
+    .mobli_menu{
+        display: block;
+    } 
+    .dashboard_logo img{
+        display: none;
+    }  
+    .search_bar{
+        width: 250px;
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 500px){ 
+    .search_bar{
+        margin-left: 10px;
+    }
+}

@@ -1,9 +1,18 @@
+import { IUser } from "../../types/globalTypes";
 import { api } from "../api/apiSlice";
+
+interface PaginatedUserResponse {
+  page: number;
+  per_page: number;
+  total: number;
+  total_pages: number;
+  data:IUser[];
+}
 
 const userApi=api.injectEndpoints({
     endpoints: (builder) => ({
-        getUsers: builder.query<any, number | void>({
-            query: (page = 1) => `users?page=${page}`,
+        getUsers: builder.query<PaginatedUserResponse, number>({
+            query: (page) => `users?page=${page}`,
           }),
           addUser: builder.mutation<any, Partial<any>>({
             query: (data) => ({
@@ -19,7 +28,7 @@ const userApi=api.injectEndpoints({
               body: updatedUser,
             }),
           }),
-          deleteUser: builder.mutation<any, number>({
+          deleteUser: builder.mutation< void,number>({
             query: (id) => ({
               url: `users/${id}`,
               method: 'DELETE',
