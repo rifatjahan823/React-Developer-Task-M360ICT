@@ -4,7 +4,8 @@
     position: sticky;
     padding: 0 25px;
     background:white;
-    border-right:2px solid #F3F3F3
+    border-right:2px solid #F3F3F3;
+  
 }
 .side_menu{
     list-style: none;

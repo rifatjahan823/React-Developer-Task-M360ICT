@@ -3,7 +3,8 @@
     margin-left: 110px;
     background-color: #F0F5FA;
     border: none;
-    padding: 8px;
+    padding: 12px 15px;
+    border-radius: 15px;
 }
 .search_bar:hover, .search_bar:focus{
     background-color: #F0F5FA;

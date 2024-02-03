@@ -83,7 +83,7 @@ const Navbar = ({ isAuthenticated }: NavigationMenuProps) => {
             name=""
             id=""
             placeholder="Search"
-            suffix={<BiSearch />}
+            suffix={<BiSearch style={{color:"#B0B7C3",fontSize:"20px"}}/>}
           />
         </Flex>
         <Flex align="center">

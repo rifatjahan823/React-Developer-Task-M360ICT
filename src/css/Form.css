@@ -1,0 +1,35 @@
+.form_width{
+    width: 450px;
+    margin: auto;
+}
+.form_section .ant-input-affix-wrapper {
+    height: 45px;
+    border-radius:15px;
+}
+ .form_section .ant-input-outlined:hover {
+    border: 1px solid #d9d9d9;
+   outline: none;
+}
+ .form_section .ant-input-outlined:focus  {
+   outline: none;
+   box-shadow: none;
+   outline: none;
+}
+.form_section  .ant-btn-primary{
+    height: 45px;
+    border-radius:15px;
+}
+
+@media screen and (max-width: 576px) {
+    .form_width{
+        width: 380px;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .form_width{
+        width: 300px;
+    }
+    
+}

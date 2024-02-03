@@ -5,6 +5,7 @@ import { BiSolidLock } from "react-icons/bi";
 import { ApiResponse, login, setAuth } from "../redux/user/authSlice";
 import { useAppDispatch } from "../redux/hooks/hooks";
 import { useNavigate } from "react-router-dom";
+import '../css/Form.css'
 
 
 
@@ -37,7 +38,7 @@ const SignInForm = () => {
     };
   
   return (
-    <div >
+    <div className="form_section">
          <Form
             name="basic"
             initialValues={{ remember: true }}

@@ -1,6 +1,7 @@
 import React from "react";
 import '../css/Pagination.css'
 import { Link } from "react-router-dom";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 
 interface PaginationProps {
@@ -16,6 +17,9 @@ const Pagination = ({ totalPages, currentPage, onPageChange }:PaginationProps) =
       <Link to='' onClick={() => onPageChange(currentPage - 1)}>
         &laquo;
       </Link>
+      <Link to='' onClick={() => onPageChange(currentPage - 1)}>
+      <FaAngleLeft style={{fontSize:10}}/>
+      </Link>
       {pages.map((page) => (
        <Link
        key={page}
@@ -26,6 +30,9 @@ const Pagination = ({ totalPages, currentPage, onPageChange }:PaginationProps) =
        {page}
      </Link>
       ))}
+      <Link to='' onClick={() => onPageChange(currentPage + 1)}>
+      <FaAngleRight style={{fontSize:10}}/>
+      </Link>
       <Link to='' onClick={() => onPageChange(currentPage + 1)}>
         &raquo;
       </Link>

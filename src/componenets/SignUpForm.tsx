@@ -5,6 +5,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import { RiUserSmileFill } from "react-icons/ri";
 import { BiSolidLock } from "react-icons/bi";
 import Step from "./ui/Step";
+import '../css/Form.css'
 
 
 type FieldType = {
@@ -28,7 +29,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <div >
+    <div className="form_section">
           <Form
             name="basic"
             initialValues={{ remember: true }}
