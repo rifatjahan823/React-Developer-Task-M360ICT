@@ -7,7 +7,7 @@ import {  Dropdown } from "antd";
 import { FaRegUserCircle } from "react-icons/fa";
 import logo from '../Assets/logo.png'
 import '../css/Navbar.css'
-import { Link,} from "react-router-dom";
+import { Link, useNavigate,} from "react-router-dom";
 import { useAppDispatch,} from "../redux/hooks/hooks";
 import { clearAuth, setAuth } from "../redux/user/authSlice";
 import MobileSidebar from "./MobileSidebar";
@@ -23,9 +23,11 @@ type ItemType = {
 
 const Navbar = ({ isAuthenticated }: NavigationMenuProps) => {
   const dispatch = useAppDispatch();
+  const navigate=useNavigate()
   const handleLogout = () => {
     dispatch(clearAuth());
     localStorage.removeItem('authState');
+    navigate('/signin')
   };
 
   useEffect(() => {
@@ -52,14 +54,14 @@ const Navbar = ({ isAuthenticated }: NavigationMenuProps) => {
       key: "2",
       label: <Link to='/'>Profile</Link>,
     },
-       {
-          key: "3",
-          label: <span onClick={handleLogout}>Logout</span>,
-        },
-        isAuthenticated &&
+       
        {
           key: "1",
           label: <Link to='/signin'>Sign In</Link>,
+        },
+        {
+          key: "3",
+          label: <span onClick={handleLogout}>Logout</span>,
         },
   ].filter(Boolean) as ItemType[];
 
